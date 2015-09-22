@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /**
  * 
  */
@@ -14,9 +16,15 @@ public class MorseCodeProgram {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		InputHandler();
 	}
-
+	public static void InputHandler() {
+// next gets a word using ' ' as a delimiter
+		Scanner sc = new Scanner(System.in); 
+		String letter = sc.next();
+		System.out.println(letter);
+	
+	}
 	public static String GetMorse(char letter){
 		String code;
 		switch (letter) {
@@ -51,12 +59,7 @@ public class MorseCodeProgram {
 
 
 
-
-		}
-		return "FOO";
-
 	}
 }
 
 
-:
