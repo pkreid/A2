@@ -20,10 +20,10 @@ public class MorseCodeProgram {
 		UserInp = InputHandler();
 		for (int i = 0; i < (UserInp.length()) ; i++) {
 			char UserChar = UserInp.charAt(i);
-			char UpperChar = Character.toUpperCase(UserChar);
+			char UpperChar = Character.toUpperCase(UserChar); // move to Uppercase
 			String MorseChar = GetMorse(UpperChar);
 			System.out.print(MorseChar + " ");
-					}
+		}
 	}
 	public static String InputHandler() {
 		Scanner sc = new Scanner(System.in); 
@@ -36,7 +36,7 @@ public class MorseCodeProgram {
 	public static String GetMorse(char letter){
 		String code = null;
 		switch (letter) {
-		case 'A': code = ".--";  break;
+		case 'A': code = ".-";  break;
 		case 'B': code = "-..."; break;
 		case 'C': code = "-.-."; break;
 		case 'D': code = "-..";  break;
