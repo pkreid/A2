@@ -1,11 +1,12 @@
+/**
+ * @author Peter Kowalchuk-Reid
+ * Student ID: 101006196
+ *
+ */
 import java.util.Scanner;
-
 
 public class CellPhoneProgram {
 
-	/**
-	 * @param args
-	 */
 	static final double city1x = 100;
 	static final double city1y = 360;
 	static final double city2x = 250;
@@ -22,7 +23,7 @@ public class CellPhoneProgram {
 		double c3Range = getRange("City 3");
 		double c4Range = getRange("City 4");
 		
-		double c1c2Dist = distance(city1x, city1y, city2x, city2y);
+		double c1c2Dist = distance(city1x, city1y, city2 x, city2y);
 		double c2c3Dist = distance(city2x, city2y, city3x, city3y);
 		double c3c4Dist = distance(city3x, city3y, city4x, city4y);
 		
