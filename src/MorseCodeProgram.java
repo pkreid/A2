@@ -19,9 +19,10 @@ public class MorseCodeProgram {
 		String UserInp;
 		UserInp = InputHandler();
 		for (int i = 0; i < (UserInp.length()) ; i++) {
-			String MorseChar = GetMorse(UserInp.charAt(i));
-			System.out.print("FOO");
-			System.out.print(MorseChar);
+			char UserChar = UserInp.charAt(i);
+			char UpperChar = Character.toUpperCase(UserChar);
+			String MorseChar = GetMorse(UpperChar);
+			System.out.print(MorseChar + " ");
 					}
 	}
 	public static String InputHandler() {
@@ -60,7 +61,7 @@ public class MorseCodeProgram {
 		case 'X': code = "-.--"; break;
 		case 'Y': code = "-.--"; break;
 		case 'Z': code = "--.."; break;
-		case ' ': code = " ";    break;
+		case ' ': code = "  ";   break;
 		}
 		return code;
 
