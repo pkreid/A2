@@ -1,73 +1,73 @@
-import java.util.Scanner;
-
-/**
- * 
- */
 
 /**
  * @author Peter Kowalchuk-Reid
  * Student ID: 101006196
  *
  */
-public class MorseCodeProgram {
+import java.util.Scanner;
+public class ReverseMorseCodeProgram {
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		
+		// TODO Auto-generated method stub
 		String UserInp;
 		UserInp = InputHandler();
-		for (int i = 0; i < (UserInp.length()) ; i++) {
-			char UserChar = UserInp.charAt(i);
-			char UpperChar = Character.toUpperCase(UserChar); // move to Uppercase
-			String MorseChar = GetMorse(UpperChar);
-			System.out.print(MorseChar + " ");
+		String[] UserCode = UserInp.split(" ");
+		String txtOut = "";
+		for (int i = 0; i < (UserCode.length) ; i++) {
+			char MorseChar = decodeLetter(UserCode[i]);
+			txtOut += MorseChar;
+			
 		}
+		System.out.print(txtOut);
 	}
+	
 	public static String InputHandler() {
 		Scanner sc = new Scanner(System.in); 
 		String InputLine = sc.nextLine();
-		//System.out.println(InputLine);
 		sc.close();
 		return InputLine;
-		
 	}
-	public static String GetMorse(char letter){
-		String code = null;
-		switch (letter) {
-		case 'A': code = ".-";  break;
-		case 'B': code = "-..."; break;
-		case 'C': code = "-.-."; break;
-		case 'D': code = "-..";  break;
-		case 'E': code = ".";    break;
-		case 'F': code = "..-."; break;
-		case 'G': code = "--.";  break;
-		case 'H': code = "...."; break;
-		case 'I': code = "..";   break;
-		case 'J': code = ".---"; break;
-		case 'K': code = "-.-";  break;
-		case 'L': code = ".-.."; break;
-		case 'M': code = "--";   break;
-		case 'O': code = "---";  break;
-		case 'P': code = ".--."; break;
-		case 'Q': code = "--.-"; break;
-		case 'R': code = ".-.";  break;
-		case 'S': code = "...";  break;
-		case 'T': code = "-";    break;
-		case 'U': code = "..-";  break;
-		case 'V': code = "...-"; break;
-		case 'W': code = ".--";  break;
-		case 'X': code = "-.--"; break;
-		case 'Y': code = "-.--"; break;
-		case 'Z': code = "--.."; break;
-		case ' ': code = "  ";   break;
+	
+	
+	public static char decodeLetter(String MorseStr){
+		char code = ' ' ;
+		switch (MorseStr) {
+		case ".-"  : code = 'A'; break;
+		case "-...": code = 'B'; break;
+		case "-.-.": code = 'C'; break;
+		case "-.." : code = 'D'; break;
+		case "."   : code = 'E'; break;
+		case "..-.": code = 'F'; break;
+		case "--." : code = 'G'; break;
+		case "....": code = 'H'; break;
+		case ".."  : code = 'I'; break;
+		case ".---": code = 'J'; break;
+		case "-.-" : code = 'L'; break;
+		case "--"  : code = 'M'; break;
+		case "-."  : code = 'N'; break;
+		case "---" : code = 'O'; break;
+		case ".--.": code = 'P'; break;
+		case "--.-": code = 'Q'; break;
+		case ".-." : code = 'R'; break;
+		case "..." : code = 'S'; break;
+		case "-"   : code = 'T'; break;
+		case "..-" : code = 'U'; break;
+		case "...-": code = 'V'; break;
+		case ".--" : code = 'W'; break;
+		case "-..-": code = 'X'; break;
+		case "-.--": code = 'Y'; break;
+		case "--..": code = 'Z'; break;
+		default    : code = '\0';
+		
+
 		}
 		return code;
 
-
+		
 
 	}
 }
-
 
