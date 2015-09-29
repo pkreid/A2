@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+import javax.jws.soap.SOAPBinding.Use;
+
 /**
  * 
  */
@@ -16,14 +18,21 @@ public class MorseCodeProgram {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		InputHandler();
+		String UserInp;
+		UserInp = InputHandler();
+		for (int i = 0; i < (UserInp.length()) ; i++) {
+			System.out.print(UserInp.charAt(i));
+			System.out.print(" ");
+		}
 	}
-	public static void InputHandler() {
+	public static String InputHandler() {
 // next gets a word using ' ' as a delimiter
 		Scanner sc = new Scanner(System.in); 
 		String InputLine = sc.nextLine();
-		System.out.println(InputLine);
-	
+	//	System.out.println(InputLine);
+		sc.close();
+		return InputLine;
+		
 	}
 	public static String GetMorse(char letter){
 		String code;
